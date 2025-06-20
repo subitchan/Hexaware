@@ -1,0 +1,73 @@
+========================================================================================================
+For logging in use password as hashedpwd1 to hashedpwd5 with respective user names given in user table
+ (  1st three job seeker role remaining employer role)
+=======================================================================================================
+job seeker methods (only job seeker role can access these methods)
+
+🔹 1. Add Job Seeker (POST)
+URL:
+http://localhost:2003/jobSeeker/addJobSeeker
+Method: POST
+Body (raw JSON):
+{
+  "fullName": "Arjun Mehta",
+  "skills": "Java, Spring Boot",
+  "education": "B.Tech CSE",
+  "phone": "9876543210",
+  "email": "arjun@example.com"
+}
+
+🔹 2. Show All Job Seekers (GET)
+URL:
+http://localhost:2003/jobSeeker/showJobSeeker
+Method: GET
+
+🔹 3. Search Job Seekers by Name (GET)
+URL:
+http://localhost:2003/jobSeeker/searchByJobSeekerName?name=Arjun
+Method: GET
+
+🔹 4. Get Job Seeker by ID (GET)
+URL:
+http://localhost:2003/jobSeeker/searchById/1
+Method: GET
+
+🔹 5. Update Job Seeker by ID (PUT)
+URL:
+http://localhost:2003/jobSeeker/updateJobSeeker/1
+Method: PUT
+Body (raw JSON):
+{
+  "skills": "Java, Spring Boot, Microservices",
+  "education": "M.Tech CSE",
+  "phone": "9123456780",
+  "email": "arjun_updated@example.com"
+}
+
+🔹 6. Delete Job Seeker by ID (DELETE)
+URL:
+http://localhost:2003/jobSeeker/deleteJobSeeker/1
+Method: DELETE
+=============================================================================================================================================
+Employer methods (only employer role can access these methods)
+🔹 1. Add Employer (POST)
+URL:
+http://localhost:2003/employer/add
+Method: POST
+Body (raw JSON):
+{
+  "companyName": "Hexaware Technologies",
+  "industry": "IT Services",
+  "location": "Mumbai",
+  "contactEmail": "hr@hexaware.com"
+}
+
+🔹 2. Show All Employers (GET)
+URL:
+http://localhost:2003/employer/all
+Method: GET
+
+🔹 3. Get Employer by ID (GET)
+URL:
+http://localhost:2003/employer/get/1
+Method: GET
